@@ -21,7 +21,8 @@ module.exports = function encode_alt(input) {
       input_index += 1
     }
 
-    // If we hit the end of the input, we have to append a zero and stop.
+    // If we hit the end of the input we can stop. The frame marker is not
+    // appended to the output explicitly. 
     if (input_index === input.length) {
       break
     }
